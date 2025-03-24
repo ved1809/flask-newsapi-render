@@ -9,7 +9,7 @@ CORS(app)
 NEWS_API_KEY = os.getenv("API_KEY")
 NEWS_URL = "https://newsapi.org/v2/top-headlines"
 
-@app.route('/news', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_news():
     category = request.args.get('category', 'business')  # Default to business news
     country = request.args.get('country', 'us')  # Default to US news
