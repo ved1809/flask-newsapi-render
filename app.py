@@ -24,7 +24,7 @@ def get_news():
         return jsonify({"error": "Failed to fetch news"}), response.status_code
 
     data = response.json()
-    return jsonify(data["articles"][:10])  # Return top 10 articles
+    return jsonify(data["articles"][:50])  # Return top 50 articles
 
 if __name__ == '__main__':
     app.run(debug=True)
